@@ -61,11 +61,11 @@ jobs:
       matrix:
         include:
           - image: harvester-lvm-csi-plugin
-            dockerfile: package/dockerfile
+            dockerfile: package/Dockerfile
           - image: harvester-lvm-provisioner
-            dockerfile: package/dockerfile.provisioner
+            dockerfile: package/Dockerfile.provisioner
           - image: harvester-lvm-csi-driver-webhook
-            dockerfile: package/dockerfile.webhook
+            dockerfile: package/Dockerfile.webhook
     steps:
     - name: checkout code without refs
       if: ${{ inputs.refs == '' }}
